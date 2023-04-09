@@ -21,63 +21,59 @@ class AppState extends State<App> {
           backgroundColor: Colors.black,
           foregroundColor: Colors.white,
         ),
-        body: Container(
-          child: Align(
-            alignment: Alignment.bottomCenter,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Expanded(
-                  child: Align(
-                    alignment: Alignment.bottomRight,
-                    child: Container(
-                      margin: EdgeInsets.all(20),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Container(
-                            width: double.infinity,
-                            child: Text(
-                              '${expression}',
-                              textScaleFactor: resultEvaluated ? 2 : 3,
-                              textAlign: TextAlign.right,
-                              style: TextStyle(
-                                color: resultEvaluated
-                                    ? Colors.grey
-                                    : Colors.white,
-                              ),
+        body: Align(
+          alignment: Alignment.bottomCenter,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Expanded(
+                child: Align(
+                  alignment: Alignment.bottomRight,
+                  child: Container(
+                    margin: EdgeInsets.all(20),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Container(
+                          width: double.infinity,
+                          child: Text(
+                            '${expression}',
+                            textScaleFactor: resultEvaluated ? 2 : 3,
+                            textAlign: TextAlign.right,
+                            style: TextStyle(
+                              color:
+                                  resultEvaluated ? Colors.grey : Colors.white,
                             ),
                           ),
-                          Container(
-                            width: double.infinity,
-                            child: Text(
-                              '= ${result}',
-                              textScaleFactor: resultEvaluated ? 3 : 2,
-                              textAlign: TextAlign.right,
-                              style: TextStyle(
-                                color: resultEvaluated
-                                    ? Colors.white
-                                    : Colors.grey,
-                              ),
+                        ),
+                        Container(
+                          width: double.infinity,
+                          child: Text(
+                            '= ${result}',
+                            textScaleFactor: resultEvaluated ? 3 : 2,
+                            textAlign: TextAlign.right,
+                            style: TextStyle(
+                              color:
+                                  resultEvaluated ? Colors.white : Colors.grey,
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                Container(
-                  color: Colors.white,
-                  padding: EdgeInsets.only(bottom: 1),
-                  margin: EdgeInsets.symmetric(horizontal: 20),
-                ),
-                buildFirstRow(calc),
-                buildSecondRow(calc),
-                buildThirdRow(calc),
-                buildFourthRow(calc),
-                buildFifthRow(calc),
-              ],
-            ),
+              ),
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.only(bottom: 1),
+                margin: EdgeInsets.symmetric(horizontal: 20),
+              ),
+              buildFirstRow(calc),
+              buildSecondRow(calc),
+              buildThirdRow(calc),
+              buildFourthRow(calc),
+              buildFifthRow(calc),
+            ],
           ),
         ),
       ),
