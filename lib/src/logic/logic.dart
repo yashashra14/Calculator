@@ -2,7 +2,7 @@ import 'package:math_expressions/math_expressions.dart';
 
 class Calculator {
   late String expression;
-  late double result;
+  late dynamic result;
   late Parser parser;
   late Expression exp;
   late ContextModel cm;

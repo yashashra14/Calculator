@@ -8,7 +8,7 @@ class App extends StatefulWidget {
 
 class AppState extends State<App> {
   String expression = '0';
-  double result = 0;
+  dynamic result = 0;
   bool resultEvaluated = false;
   @override
   Widget build(BuildContext context) {
