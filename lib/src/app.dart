@@ -159,7 +159,6 @@ class AppState extends State<App> {
         [
           Text(
             'AC',
-            key: Key('AC'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.amber),
           ),
@@ -171,13 +170,11 @@ class AppState extends State<App> {
           ),
           Text(
             '%',
-            key: Key('%'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.amber),
           ),
           Text(
             '/',
-            key: Key('/'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.amber),
           ),
@@ -200,25 +197,21 @@ class AppState extends State<App> {
         [
           Text(
             '7',
-            key: Key('7'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.white),
           ),
           Text(
             '8',
-            key: Key('8'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.white),
           ),
           Text(
             '9',
-            key: Key('9'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.white),
           ),
           Text(
             'x',
-            key: Key('x'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.amber),
           ),
@@ -241,25 +234,21 @@ class AppState extends State<App> {
         [
           Text(
             '4',
-            key: Key('4'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.white),
           ),
           Text(
             '5',
-            key: Key('5'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.white),
           ),
           Text(
             '6',
-            key: Key('6'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.white),
           ),
           Text(
             '-',
-            key: Key('-'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.amber),
           ),
@@ -282,25 +271,21 @@ class AppState extends State<App> {
         [
           Text(
             '1',
-            key: Key('1'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.white),
           ),
           Text(
             '2',
-            key: Key('2'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.white),
           ),
           Text(
             '3',
-            key: Key('3'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.white),
           ),
           Text(
             '+',
-            key: Key('+'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.amber),
           ),
@@ -323,25 +308,21 @@ class AppState extends State<App> {
         [
           Text(
             '',
-            key: Key(''),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.amber),
           ),
           Text(
             '0',
-            key: Key('0'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.white),
           ),
           Text(
             '.',
-            key: Key('.'),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.white),
           ),
           Text(
             '=',
-            key: Key('='),
             textScaleFactor: 2,
             style: TextStyle(color: Colors.amber),
           ),
