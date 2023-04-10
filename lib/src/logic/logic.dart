@@ -1,5 +1,8 @@
 import 'package:math_expressions/math_expressions.dart';
 
+///This class is used to contruct logic for the Calculator application
+///App uses a library named math_expressions for evaluating the results from a String
+///
 class Calculator {
   late String expression;
   late dynamic result;
@@ -12,6 +15,10 @@ class Calculator {
     result = 0;
     resultEvaluated = false;
   }
+
+  /// Every button calls its own helper method on being pressed
+  ///
+
   reset() {
     resultEvaluated = false;
     expression = '0';
@@ -27,7 +34,7 @@ class Calculator {
     getResults(fromOutside: false);
   }
 
-  mod() {
+  percentage() {
     result = result / 100;
     expression = result.toString();
   }
@@ -86,6 +93,8 @@ class Calculator {
     }
     getResults(fromOutside: false);
   }
+
+  // Below method is the helper method used to evaluate the results using expression
 
   getResults({bool fromOutside = true}) {
     String internalExp = expression.replaceAll(RegExp('x'), '*');
@@ -187,4 +196,5 @@ class Calculator {
   }
 }
 
+// Notice how only single instance of this class is used inside entire application
 final calc = Calculator();

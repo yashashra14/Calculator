@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'logic/logic.dart';
 
+/// This screen builds the ui for the screen
+/// App uses StateFul Widgets for State Management
+
 class App extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => AppState();
 }
+
+/// There are 3 variable used in entire app
+/// expression for String to be displayed
+/// result as double for calcultions
+/// and a boolean for changing textfield size on fetching results
 
 class AppState extends State<App> {
   String expression = '0';
@@ -21,6 +29,8 @@ class AppState extends State<App> {
           backgroundColor: Colors.black,
           foregroundColor: Colors.white,
         ),
+
+        //App uses Column and Rows to build the Grid Layout
         body: Align(
           alignment: Alignment.bottomCenter,
           child: Column(
@@ -34,6 +44,7 @@ class AppState extends State<App> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
+                        // First Container for Entered expression
                         Container(
                           width: double.infinity,
                           child: Text(
@@ -46,6 +57,7 @@ class AppState extends State<App> {
                             ),
                           ),
                         ),
+                        //Second container for result
                         Container(
                           width: double.infinity,
                           child: Text(
@@ -68,6 +80,7 @@ class AppState extends State<App> {
                 padding: EdgeInsets.only(bottom: 1),
                 margin: EdgeInsets.symmetric(horizontal: 20),
               ),
+              // App uses helper methods to build 5 rows for the grid
               buildFirstRow(calc),
               buildSecondRow(calc),
               buildThirdRow(calc),
@@ -80,6 +93,9 @@ class AppState extends State<App> {
     );
   }
 
+  ///This helper method takes 2 two lists, first a list of widgets to be displayed in the grid
+  ///And the other list of function which is called when the Button is pressed
+  ///Observe that setState is called everytime when button is pressed
   Widget _buildRow(@required List<Widget> widgets, List<Function()> callback,
       Calculator calc) {
     return Row(
@@ -148,6 +164,9 @@ class AppState extends State<App> {
     );
   }
 
+  ///These five build Method actually creates Row, observe how Widgets and functions
+  ///are passed as a list to buildRow method
+
   Widget buildFirstRow(Calculator calc) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 20),
@@ -178,7 +197,7 @@ class AppState extends State<App> {
         [
           calc.reset,
           calc.backSpace,
-          calc.mod,
+          calc.percentage,
           calc.divide,
         ],
         calc,
