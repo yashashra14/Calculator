@@ -175,6 +175,7 @@ class Calculator {
     else {
       expression += '7';
     }
+    getResults(fromOutside: false);
   }
 
   eight() {
